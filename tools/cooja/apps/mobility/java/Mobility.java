@@ -46,7 +46,7 @@ import org.contikios.cooja.PluginType;
 import org.contikios.cooja.Simulation;
 import org.contikios.cooja.TimeEvent;
 import org.contikios.cooja.VisPlugin;
-import org.contikios.cooja.dialogs.MessageList;
+import org.contikios.cooja.dialogs.MessageListUI;
 import org.contikios.cooja.interfaces.Position;
 import org.contikios.cooja.util.StringUtils;
 
@@ -67,8 +67,8 @@ public class Mobility extends VisPlugin {
 
   private File filePositions = null;
 
-  //tipo abstrato que nao pode ser instanciada
-  private MessageList log = new MessageList();
+  //MessageListUI eh a implementacao concreta de MessageList
+  private MessageListUI log = new MessageListUI();
 
   public Mobility(Simulation simulation, final Cooja gui) {
     super("Mobility", gui, false);
